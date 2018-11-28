@@ -441,4 +441,41 @@ h3{
   }
 }
 
+.pastEvents{
+  position: relative;
+  padding: 110px 0 90px;
+  h2{
+     padding-left: 85px;
+     margin-bottom: 25px;
+   }
+  p{
+    font-family: Roboto;
+    font-size: 1.4rem;
+    padding-left: 85px;
+    margin-bottom: 100px;
+  }
+  &__images{
+    margin-bottom: 100px;
+  }
+  &__image{
+    padding: 0;
+    max-height: 420px;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  input{
+    @include button-green;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: #373737;
+  }
+  &:before{
+    @include afterBlock-right;
+    top: -65px;
+  }
+}
+
 
