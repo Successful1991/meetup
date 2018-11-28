@@ -1,7 +1,319 @@
+@font-face {
+  font-family: "Roboto-slab-reg";
+  src: url(../fonts/robotoslabregular.woff);
+}
+@font-face {
+  font-family: "Roboto-slab-thin";
+  src: url(../fonts/robotoslabthin.woff);
+}
+
 html{
   font-size: 10px;
 }
 ul{
   list-style: none;
 }
+h1{
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 5rem;
+}
+h2{
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 5rem;
+}
+h3{
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 3.5rem;
+}
 
+@mixin afterBlock{
+  content: "";
+  position: absolute;
+  bottom: -16%;
+  left: 0;
+  display: inline-block;
+  height: 20%;
+  width: 100%;
+  background: #ffffff;
+  transform: skewY(-5deg);
+  transform-origin: 0 100%;
+}
+
+.header{
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+  &:after{
+    @include afterBlock;
+    //content: "";
+    //position: absolute;
+    //bottom: -16%;
+    //left: 0;
+    //display: inline-block;
+    //height: 20%;
+    //width: 105%;
+    //background: #ffffff;
+    //transform: rotate(-5deg);
+    //transform-origin: 0 100%;
+  }
+  &__bg-filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: url("/app/img/workplace-1245776_1920-min.jpg")no-repeat center;
+    background-size: cover;
+    filter: brightness(30%);
+    z-index: -1;
+  }
+  &__navigate{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+  }
+  &__logo{
+    height: 62px;
+    width: 230px;
+    background: url("/app/img/header-logo.png")no-repeat center;
+    background-size: cover;
+  }
+  &__menu{
+    display: flex;
+    font-size: 1.5rem;
+    font-family: Roboto;
+    font-weight: 300;
+    text-transform: uppercase;
+    li{
+      a{
+        color: #ffffff;
+        &:hover{
+          text-decoration: none;
+
+        }
+      }
+      margin: 0 15px;
+    }
+  }
+  nav{
+    display: flex;
+    align-items: center;
+  }
+
+  .timer{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 170px;
+    color: #ffffff;
+    border: 2px solid #90d23d;
+    border-radius: 15px;
+    span{
+      font-size: 13rem;
+      line-height: 1.2em;
+      font-family: Roboto-slab-thin;
+    }
+    &__text{
+      text-align: center;
+      font-family:Roboto-slab-reg;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.greeting{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 140px;
+  &__row{
+    justify-content: space-around;
+    position: relative;
+  }
+  &__text{
+    width: 45%;
+    p{
+      font-size: 1.4rem;
+      font-family: "Roboto Light";
+      color: #242424;
+    }
+  }
+  .register{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #ffffff;
+    &__wrapper{
+      width: 37%;
+      position: relative;
+    }
+    form{
+      padding: 30px 30px 20px;
+      box-shadow: 0 1px 0 1px rgba(35,31,32,0.35);
+      p{
+        font-family: "Roboto Light";
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        color: #6c6c6c;
+        text-align: center;
+        margin-bottom:0;
+      }
+    }
+    legend{
+      font-size: 30px;
+      font-family: Roboto;
+      font-weight: bold;
+      color: #252525;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input{
+      width: 100%;
+      height: 55px;
+      font-family: "Roboto Light";
+      font-size: 1.9rem;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #bebebe;
+      padding: 0 10px;
+      ::-webkit-input-placeholder,:-moz-placeholder{
+        font-size: 1.9rem;
+        font-family: "Roboto Light";
+        color: #bebebe;
+      }
+      &:nth-of-type(4){
+        margin-bottom: 40px;
+      }
+      &[type = submit]{
+        color: #ffffff;
+        font-size: 2.8rem;
+        font-family:Roboto;
+        font-weight: bold;
+        background: #90d23d;
+        border:none;
+        margin-bottom: 15px;
+      }
+      &:focus{
+        outline: none;
+        box-shadow: 0 0 0 1px #90d23d;
+      }
+    }
+  }
+}
+
+.event{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+  &__details{
+    text-align: center;
+    width: 26.5%;
+    img{
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+    p{
+      font-family: "Roboto Light";
+      font-size: 1.4rem;
+      color: #242424;
+    }
+  }
+  &__img{
+    width: 70%;
+    height: 190px;
+    margin: 0 auto 40px;
+  }
+}
+
+.eventTable {
+  position: relative;
+  table {
+    width: 94%;
+    color: #ffffff;
+    margin: 0 auto 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    tr{
+      height: 75px;
+      background: #373737;
+      td,th{
+        height: auto;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 22px;
+        &:nth-child(1){
+          width: 20%;
+        }
+        &:nth-child(2){
+          text-align: start;
+          width: 70%;
+          padding-left: 30px;
+        }
+        &:nth-child(3){
+          width: 10%;
+        }
+      }
+      th{
+        font-size: 30px;
+        background: #a3cc40;
+      }
+      td{
+        cursor: pointer;
+      }
+      &:nth-child(2n+1){
+        background: #4b4d4f;
+      }
+    }
+  }
+  &__description{
+    text-align: center;
+    font-family: "Roboto Light";
+    font-size: 1.4rem;
+    line-height: 1.1em;
+    margin-bottom: 170px;
+  }
+  &:after{
+    @include afterBlock;
+    bottom: -20%;
+  }
+
+}
+
+.rewards{
+  background: #4b4d4f;
+  padding: 170px 0 160px;
+  color: #ffffff;
+  &__image{
+    //position: absolute;
+    top: -230px;
+    left: 3%;
+    width: 330px;
+    height: 330px;
+    background: url("../img/Elite-Badge.png")no-repeat center;
+    background-size: contain;
+    z-index: 5;
+  }
+  &__description{
+    text-align: right;
+    font-family: "Roboto Light";
+    font-size: 1.4rem;
+    input{
+      background: #90d23d;
+      padding: 15px 20px;
+      color: #ffffff;
+      font-size: 1.8rem;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

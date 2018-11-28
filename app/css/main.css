@@ -1,5 +1,297 @@
+@font-face {
+  font-family: "Roboto-slab-reg";
+  src: url(../fonts/robotoslabregular.woff); }
+
+@font-face {
+  font-family: "Roboto-slab-thin";
+  src: url(../fonts/robotoslabthin.woff); }
+
 html {
   font-size: 10px; }
 
 ul {
   list-style: none; }
+
+h1 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 5rem; }
+
+h2 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 5rem; }
+
+h3 {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 3.5rem; }
+
+.header {
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden; }
+  .header:after {
+    content: "";
+    position: absolute;
+    bottom: -16%;
+    left: 0;
+    display: inline-block;
+    height: 20%;
+    width: 100%;
+    background: #ffffff;
+    -webkit-transform: skewY(-5deg);
+        -ms-transform: skewY(-5deg);
+            transform: skewY(-5deg);
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%; }
+  .header__bg-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: url("/app/img/workplace-1245776_1920-min.jpg") no-repeat center;
+    background-size: cover;
+    -webkit-filter: brightness(30%);
+            filter: brightness(30%);
+    z-index: -1; }
+  .header__navigate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 110px; }
+  .header__logo {
+    height: 62px;
+    width: 230px;
+    background: url("/app/img/header-logo.png") no-repeat center;
+    background-size: cover; }
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    font-family: Roboto;
+    font-weight: 300;
+    text-transform: uppercase; }
+    .header__menu li {
+      margin: 0 15px; }
+      .header__menu li a {
+        color: #ffffff; }
+        .header__menu li a:hover {
+          text-decoration: none; }
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header .timer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 auto 170px;
+    color: #ffffff;
+    border: 2px solid #90d23d;
+    border-radius: 15px; }
+    .header .timer span {
+      font-size: 13rem;
+      line-height: 1.2em;
+      font-family: Roboto-slab-thin; }
+    .header .timer__text {
+      text-align: center;
+      font-family: Roboto-slab-reg;
+      font-size: 25px;
+      margin-bottom: 20px; }
+
+.greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 140px; }
+  .greeting__row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: relative; }
+  .greeting__text {
+    width: 45%; }
+    .greeting__text p {
+      font-size: 1.4rem;
+      font-family: "Roboto Light";
+      color: #242424; }
+  .greeting .register {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #ffffff; }
+    .greeting .register__wrapper {
+      width: 37%;
+      position: relative; }
+    .greeting .register form {
+      padding: 30px 30px 20px;
+      -webkit-box-shadow: 0 1px 0 1px rgba(35, 31, 32, 0.35);
+              box-shadow: 0 1px 0 1px rgba(35, 31, 32, 0.35); }
+      .greeting .register form p {
+        font-family: "Roboto Light";
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        color: #6c6c6c;
+        text-align: center;
+        margin-bottom: 0; }
+    .greeting .register legend {
+      font-size: 30px;
+      font-family: Roboto;
+      font-weight: bold;
+      color: #252525;
+      text-align: center;
+      margin-bottom: 10px; }
+    .greeting .register fieldset {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .greeting .register input {
+      width: 100%;
+      height: 55px;
+      font-family: "Roboto Light";
+      font-size: 1.9rem;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #bebebe;
+      padding: 0 10px; }
+      .greeting .register input ::-webkit-input-placeholder, .greeting .register input :-moz-placeholder {
+        font-size: 1.9rem;
+        font-family: "Roboto Light";
+        color: #bebebe; }
+      .greeting .register input:nth-of-type(4) {
+        margin-bottom: 40px; }
+      .greeting .register input[type=submit] {
+        color: #ffffff;
+        font-size: 2.8rem;
+        font-family: Roboto;
+        font-weight: bold;
+        background: #90d23d;
+        border: none;
+        margin-bottom: 15px; }
+      .greeting .register input:focus {
+        outline: none;
+        -webkit-box-shadow: 0 0 0 1px #90d23d;
+                box-shadow: 0 0 0 1px #90d23d; }
+
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 100px; }
+  .event__details {
+    text-align: center;
+    width: 26.5%; }
+    .event__details img {
+      width: 100%;
+      height: auto;
+      margin: 0; }
+    .event__details p {
+      font-family: "Roboto Light";
+      font-size: 1.4rem;
+      color: #242424; }
+  .event__img {
+    width: 70%;
+    height: 190px;
+    margin: 0 auto 40px; }
+
+.eventTable {
+  position: relative; }
+  .eventTable table {
+    width: 94%;
+    color: #ffffff;
+    margin: 0 auto 35px;
+    border-radius: 10px;
+    overflow: hidden; }
+    .eventTable table tr {
+      height: 75px;
+      background: #373737; }
+      .eventTable table tr td, .eventTable table tr th {
+        height: auto;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 22px; }
+        .eventTable table tr td:nth-child(1), .eventTable table tr th:nth-child(1) {
+          width: 20%; }
+        .eventTable table tr td:nth-child(2), .eventTable table tr th:nth-child(2) {
+          text-align: start;
+          width: 70%;
+          padding-left: 30px; }
+        .eventTable table tr td:nth-child(3), .eventTable table tr th:nth-child(3) {
+          width: 10%; }
+      .eventTable table tr th {
+        font-size: 30px;
+        background: #a3cc40; }
+      .eventTable table tr td {
+        cursor: pointer; }
+      .eventTable table tr:nth-child(2n+1) {
+        background: #4b4d4f; }
+  .eventTable__description {
+    text-align: center;
+    font-family: "Roboto Light";
+    font-size: 1.4rem;
+    line-height: 1.1em;
+    margin-bottom: 170px; }
+  .eventTable:after {
+    content: "";
+    position: absolute;
+    bottom: -16%;
+    left: 0;
+    display: inline-block;
+    height: 20%;
+    width: 100%;
+    background: #ffffff;
+    -webkit-transform: skewY(-5deg);
+        -ms-transform: skewY(-5deg);
+            transform: skewY(-5deg);
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    bottom: -20%; }
+
+.rewards {
+  background: #4b4d4f;
+  padding: 170px 0 160px;
+  color: #ffffff; }
+  .rewards__image {
+    top: -230px;
+    left: 3%;
+    width: 330px;
+    height: 330px;
+    background: url("../img/Elite-Badge.png") no-repeat center;
+    background-size: contain;
+    z-index: 5; }
+  .rewards__description {
+    text-align: right;
+    font-family: "Roboto Light";
+    font-size: 1.4rem; }
+    .rewards__description input {
+      background: #90d23d;
+      padding: 15px 20px;
+      color: #ffffff;
+      font-size: 1.8rem;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer; }
