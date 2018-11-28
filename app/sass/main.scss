@@ -171,6 +171,7 @@ h3{
     position: absolute;
     bottom: 0;
     background: #ffffff;
+    z-index: 5;
     &__wrapper{
       width: 37%;
       position: relative;
@@ -345,11 +346,11 @@ h3{
 .speakers{
   position: relative;
   padding: 170px 0 160px;
-  h2{
+  &__h2{
     margin-left: 30px;
     margin-bottom: 10px;
   }
-  p{
+  &__p{
     margin-left: 20px;
     margin-bottom: 30px;
   }
@@ -361,22 +362,24 @@ h3{
   &__name{
     font-family: Roboto;
     font-weight: 900;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     line-height: 1em;
   }
   &__info{
     font-family: Roboto;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.8em;
+    margin-bottom: 20px;
   }
   &__card{
     display: flex;
     flex-direction: column;
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    width: 30%;
+    max-width: 300px;
     background: #90d23d url("../img/card_bg.png")no-repeat center;
-    background-size: contain;
-    margin: 20px;
+    background-size: cover;
+    margin: 1.5%;
     border-radius: 15px;
     padding: 30px 30px 20px;
   }
@@ -386,33 +389,45 @@ h3{
   &__icons{
     margin-top: auto;
   }
-  .icon{
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    &__fb{
-      background: url("../img/icons/facebook.png")no-repeat center;
-      background-size: cover;
-    }
-    &__tw{
-      background: url("../img/icons/twitter.png")no-repeat center;
-      background-size: cover;
-    }
-    &__be{
-      background: url("../img/icons/behance.png")no-repeat center;
-      background-size: cover;
-    }
-    &__dr{
-      background: url("../img/icons/dribbble.png")no-repeat center;
-      background-size: cover;
-    }
-  }
   &:after{
     @include afterBlock-left;
     bottom: -65px;
   }
 }
 
+.icon{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  &__fb{
+    background: url("../img/icons/facebook.png")no-repeat center;
+    background-size: cover;
+  }
+  &__tw{
+    background: url("../img/icons/twitter.png")no-repeat center;
+    background-size: cover;
+  }
+  &__be{
+    background: url("../img/icons/behance.png")no-repeat center;
+    background-size: cover;
+  }
+  &__dr{
+    background: url("../img/icons/dribbble.png")no-repeat center;
+    background-size: cover;
+  }
+  &__in{
+    background: url("../img/icons/linkedin.png")no-repeat center;
+    background-size: cover;
+  }
+  &__gl{
+    background: url("../img/icons/google-plus.png")no-repeat center;
+    background-size: cover;
+  }
+  &__tb{
+    background: url("../img/icons/tumblr.png")no-repeat center;
+    background-size: cover;
+  }
+}
 .sponsor{
   color: #ffffff;
   background: #4b4d4f;
@@ -478,4 +493,152 @@ h3{
   }
 }
 
+.map{
+  position: relative;
+  height: 660px;
+  width: 100%;
+  &__popup{
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    width: 80%;
+    max-width: 970px;
+    background: #ffffff;
+    padding: 60px 0 50px;
+  }
+  &__popup-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+  }
+  #map{
+    height: 100%;
+    width: 100%;
+  }
 
+  .popup{
+    &__img{
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+    &__info{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 100%;
+      input{
+        @include button-green;
+      }
+      p{
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    height: 100%;
+    input[type=text]{
+      height: 50px;
+      border: 1px solid #a5a5a5;
+      padding: 0 15px;
+      border-radius: 5px;
+    }
+    input[type=submit]{
+      height: 60px;
+      width: 100%;
+      background: #373737;
+      border: none;
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 2.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    textarea{
+      padding: 15px;
+      resize: none;
+      border-radius: 5px;
+    }
+  }
+}
+
+footer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #90d23d;
+  height: 220px;
+  .icons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    .icon{
+      margin: 0 5px;
+    };
+  }
+  p{
+    color: #ffffff;
+    font-family: "Roboto Light";
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .arrow__up{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    height: 24px;
+    width: 24px;
+    background: url("../img/Up-Button.png")no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: 1000px){
+  .speakers{
+    &__name{
+      font-size: 3vw;
+    }
+    &__info{
+      font-size: 1.3vw;
+    }
+    &__card{
+      padding: 15px 15px 10px;
+    }
+    .icon{
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 568px){
+  .speakers{
+    &__card{
+      padding: 10px 10px 10px;
+    }
+    .icon{
+      height: 15px;
+      width: 15px;
+    }
+  }
+}

@@ -184,8 +184,8 @@
 </div>
 <div class="speakers">
     <div class="container">
-        <h2>Speakers</h2>
-        <p>Meet our Valuable speakers who will be each giving 10 minutes sessions on different subjects<br>
+        <h2 class="speakers__h2">Speakers</h2>
+        <p class="speakers__p">Meet our Valuable speakers who will be each giving 10 minutes sessions on different subjects<br>
             regarding being a digital product author, working at envato and marketing your business.<br>
             Hope you will have a great time listening to our presentations!</p>
         <div class="speakers__cards">
@@ -207,10 +207,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
             <div class="speakers__card">
@@ -219,10 +219,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
             <div class="speakers__card">
@@ -231,10 +231,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
             <div class="speakers__card card__center">
@@ -246,10 +246,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
             <div class="speakers__card">
@@ -258,10 +258,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
             <div class="speakers__card">
@@ -270,10 +270,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
             <div class="speakers__card">
@@ -282,10 +282,10 @@
                 <p class="speakers__info">More about selling in the
                     Envato Marketplaces</p>
                 <div class="speakers__icons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="icon icon__fb"></a>
+                    <a href="" class="icon icon__tw"></a>
+                    <a href="" class="icon icon__be"></a>
+                    <a href="" class="icon icon__dr"></a>
                 </div>
             </div>
         </div>
@@ -319,14 +319,48 @@
         <input type="submit" value="View More">
     </div>
 </div>
+<div class="map">
+    <div id="map"></div>
+    <div class="map__popup-wrapper">
+        <div class="map__popup">
+            <div class="popup__info">
+                <div class="popup__img"><img src="app/img/popup.png" alt="bg"></div>
+                <p>Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia</p>
+                <input type="submit" value="View Map" onclick="closePopup()">
+            </div>
+            <form action="">
+                <input type="text" placeholder="Email">
+                <textarea name="" id="" cols="30" rows="15" placeholder="Type your message"></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="icons">
+            <a href="" class="icon icon__fb"></a>
+            <a href="" class="icon icon__tw"></a>
+            <a href="" class="icon icon__in"></a>
+            <a href="" class="icon icon__gl"></a>
+            <a href="" class="icon icon__tb"></a>
+        </div>
+        <p>Hope we see you at the event!<br>All Rights Reserved. Envato Bangladesh © 2015</p>
+        <div class="arrow__up" onclick="upScroll()"></div>
+    </div>
+</footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script src="app/js/timer.js"></script>
 <script src="app/js/index.js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrUcTar2ARlRKSogEQVIlWaPnmVIM_xVE&callback=initMap"></script>
+
 </body>
 </html>
