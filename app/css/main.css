@@ -34,18 +34,26 @@ h3 {
   .header:after {
     content: "";
     position: absolute;
-    bottom: -16%;
     left: 0;
+    bottom: 0;
     display: inline-block;
-    height: 20%;
+    height: 0;
     width: 100%;
-    background: #ffffff;
-    -webkit-transform: skewY(-5deg);
-        -ms-transform: skewY(-5deg);
-            transform: skewY(-5deg);
-    -webkit-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-            transform-origin: 0 100%; }
+    border-top: 0 solid transparent;
+    border-left: calc(100vw - 15px) solid transparent;
+    border-bottom: 65px solid white;
+    z-index: 1;
+    bottom: 5%;
+    border-bottom: 100px solid white; }
+  .header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    height: 5%;
+    width: 100%;
+    background: #ffffff; }
   .header__bg-filter {
     position: absolute;
     top: 0;
@@ -257,26 +265,34 @@ h3 {
   .eventTable:after {
     content: "";
     position: absolute;
-    bottom: -16%;
     left: 0;
     display: inline-block;
-    height: 20%;
+    height: 0;
     width: 100%;
-    background: #ffffff;
-    -webkit-transform: skewY(-5deg);
-        -ms-transform: skewY(-5deg);
-            transform: skewY(-5deg);
-    -webkit-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-    bottom: -20%; }
+    border-top: 65px solid white;
+    border-right: calc(100vw - 15px) solid transparent;
+    border-bottom: 0 solid transparent;
+    z-index: 1; }
 
 .rewards {
+  position: relative;
   background: #4b4d4f;
   padding: 170px 0 160px;
   color: #ffffff; }
+  .rewards:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    height: 0;
+    width: 100%;
+    border-top: 0 solid transparent;
+    border-left: calc(100vw - 15px) solid transparent;
+    border-bottom: 65px solid white;
+    z-index: 1; }
   .rewards__image {
-    top: -230px;
+    top: -280px;
     left: 3%;
     width: 330px;
     height: 330px;
@@ -287,11 +303,123 @@ h3 {
     text-align: right;
     font-family: "Roboto Light";
     font-size: 1.4rem; }
+    .rewards__description p {
+      margin-bottom: 30px; }
     .rewards__description input {
+      height: 55px;
+      width: 200px;
+      text-align: center;
       background: #90d23d;
-      padding: 15px 20px;
       color: #ffffff;
       font-size: 1.8rem;
       border-radius: 15px;
       border: none;
       cursor: pointer; }
+
+.speakers {
+  position: relative;
+  padding: 170px 0 160px; }
+  .speakers h2 {
+    margin-left: 30px;
+    margin-bottom: 10px; }
+  .speakers p {
+    margin-left: 20px;
+    margin-bottom: 30px; }
+  .speakers__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: #ffffff; }
+  .speakers__name {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 1em; }
+  .speakers__info {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.8rem; }
+  .speakers__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 300px;
+    width: 300px;
+    background: #90d23d url("../img/card_bg.png") no-repeat center;
+    background-size: contain;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 30px 30px 20px; }
+  .speakers .card__center {
+    background: url("../img/speakers-center.png") no-repeat center; }
+  .speakers__icons {
+    margin-top: auto; }
+  .speakers .icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px; }
+    .speakers .icon__fb {
+      background: url("../img/icons/facebook.png") no-repeat center;
+      background-size: cover; }
+    .speakers .icon__tw {
+      background: url("../img/icons/twitter.png") no-repeat center;
+      background-size: cover; }
+    .speakers .icon__be {
+      background: url("../img/icons/behance.png") no-repeat center;
+      background-size: cover; }
+    .speakers .icon__dr {
+      background: url("../img/icons/dribbble.png") no-repeat center;
+      background-size: cover; }
+  .speakers:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 0;
+    width: 100%;
+    border-top: 65px solid white;
+    border-right: calc(100vw - 15px) solid transparent;
+    border-bottom: 0 solid transparent;
+    z-index: 1;
+    bottom: -65px; }
+
+.sponsor {
+  color: #ffffff;
+  background: #4b4d4f;
+  text-align: center;
+  padding: 170px 0 160px; }
+  .sponsor h2 {
+    margin-bottom: 20px; }
+  .sponsor p {
+    font-family: "Roboto Light";
+    font-size: 1.4rem;
+    margin-bottom: 40px; }
+  .sponsor input {
+    height: 55px;
+    width: 200px;
+    text-align: center;
+    background: #90d23d;
+    color: #ffffff;
+    font-size: 1.8rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer; }
+  .sponsor__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px; }
+  .sponsor__logo {
+    margin: 0 40px; }
