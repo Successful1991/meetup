@@ -17,3 +17,9 @@ function upScroll() {
   $('html, body').animate({scrollTop: 0},500);
   return false;
 }
+function menuClose() {
+  $('.header nav').css({'display': 'none'});
+}
+function menuOpen() {
+  $('.header nav').css({'display': 'block'});
+}

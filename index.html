@@ -19,6 +19,10 @@
             <div class="header__logo"></div>
             <nav>
                 <ul class="header__menu">
+                    <li class="nav__closed" onclick="menuClose()">
+                        <span></span>
+                        <span></span>
+                    </li>
                     <li><a href="">Event Details</a></li>
                     <li><a href="">Speakers</a></li>
                     <li><a href="">Sponsors</a></li>
@@ -26,6 +30,11 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </nav>
+            <div class="burger" onclick="menuOpen()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <div class="row">
             <div class="timer col-md-10" id="timer">
@@ -50,7 +59,10 @@
                 </div>
             </div>
         </div>
-        <img src="app/img/Icon1.png" alt="icons">
+        <div class="header__img">
+            <img src="app/img/Icon1.png" alt="icons">
+        </div>
+
     </div>
 </header>
 <div class="greeting">
@@ -349,7 +361,6 @@
         <div class="arrow__up" onclick="upScroll()"></div>
     </div>
 </footer>
-
 
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
