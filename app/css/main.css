@@ -9,6 +9,19 @@
 html {
   font-size: 10px; }
 
+input[type=submit] {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  input[type=submit]:hover {
+    -webkit-filter: hue-rotate(320deg);
+            filter: hue-rotate(320deg); }
+
+input[type=submit]:active, input[type=submit]:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 10px 1px #90d23d;
+          box-shadow: 0 0 10px 1px #90d23d; }
+
 ul {
   list-style: none; }
 
@@ -446,6 +459,10 @@ h3 {
   .icon__tb {
     background: url("../img/icons/tumblr.png") no-repeat center;
     background-size: cover; }
+  .icon:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
 
 .sponsor {
   color: #ffffff;
@@ -499,8 +516,17 @@ h3 {
     padding: 0;
     max-height: 420px; }
     .pastEvents__image img {
+      position: relative;
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+      .pastEvents__image img:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
+        z-index: 10; }
   .pastEvents input {
     height: 55px;
     width: 200px;
